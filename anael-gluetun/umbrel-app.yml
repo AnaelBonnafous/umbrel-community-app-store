@@ -1,0 +1,61 @@
+manifestVersion: 1
+id: gluetun
+name: Gluetun
+tagline: Lightweight swiss-army-knife-like VPN client to multiple VPN service providers
+category: networking
+version: "3.40.0"
+port: 8488
+description: >-
+  Based on Alpine 3.20 for a small Docker image of 35.6MB
+
+  Supports: AirVPN, Cyberghost, ExpressVPN, FastestVPN, Giganews, HideMyAss, IPVanish, IVPN, Mullvad, NordVPN, Perfect Privacy, Privado, Private Internet Access, PrivateVPN, ProtonVPN, PureVPN, SlickVPN, Surfshark, TorGuard, VPNSecure.me, VPNUnlimited, Vyprvpn, WeVPN, Windscribe servers
+
+  Supports OpenVPN for all providers listed
+
+  Supports Wireguard both kernelspace and userspace
+
+    For AirVPN, FastestVPN, Ivpn, Mullvad, NordVPN, Perfect privacy, ProtonVPN, Surfshark and Windscribe
+    
+    For Cyberghost, Private Internet Access, PrivateVPN, PureVPN, Torguard, VPN Unlimited, VyprVPN and WeVPN using the custom provider
+    
+    For custom Wireguard configurations using the custom provider
+    
+    More in progress, see #134
+
+  DNS over TLS baked in with service provider(s) of your choice
+
+  DNS fine blocking of malicious/ads/surveillance hostnames and IP addresses, with live update every 24 hours
+
+  Choose the vpn network protocol, udp or tcp
+
+  Built in firewall kill switch to allow traffic only with needed the VPN servers and LAN devices
+
+  Built in Shadowsocks proxy server (protocol based on SOCKS5 with an encryption layer, tunnels TCP+UDP)
+
+  Built in HTTP proxy (tunnels HTTP and HTTPS through TCP)
+
+  Connect other containers to it
+
+  Connect LAN devices to it
+
+  Compatible with amd64, i686 (32 bit), ARM 64 bit, ARM 32 bit v6 and v7, and even ppc64le 🎆
+
+  Custom VPN server side port forwarding for Perfect Privacy, Private Internet Access, PrivateVPN and ProtonVPN
+
+  Possibility of split horizon DNS by selecting multiple DNS over TLS providers
+
+  Can work as a Kubernetes sidecar container, thanks @rorph
+releaseNotes: >-
+  This release upgrades WireGuard Easy to version 14.
+dependencies: []
+developer: Quentin McGaw
+website: https://github.com/qdm12/gluetun
+submitter: AnaelBonnafous
+submission: https://github.com/getumbrel/umbrel-apps/pull/XXXX
+repo: https://github.com/qdm12/gluetun
+support: https://github.com/qdm12/gluetun/discussions
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
