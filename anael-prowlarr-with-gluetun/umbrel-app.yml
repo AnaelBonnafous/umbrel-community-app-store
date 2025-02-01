@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: prowlarr-with-gluetun
+id: anael-prowlarr-with-gluetun
 category: media
 name: Prowlarr (with Gluetun)
 version: "1.29.2.4915"

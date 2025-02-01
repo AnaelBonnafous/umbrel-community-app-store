@@ -6,7 +6,7 @@ export APP_PROWLARR_READARR_CONFIG_XML=$(cat "${UMBREL_ROOT}/app-data/readarr/da
 # Check if qBittorrent and SABnzbd are installed
 installed_apps=$("${UMBREL_ROOT}/scripts/app" ls-installed)
 
-if echo "$installed_apps" | grep --quiet 'qbittorrent-with-gluetun'; then
+if echo "$installed_apps" | grep --quiet 'anael-qbittorrent-with-gluetun'; then
   export APP_PROWLARR_QBITTORRENT_INSTALLED="true"
 fi
 

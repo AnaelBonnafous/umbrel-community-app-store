@@ -1,5 +1,5 @@
 manifestVersion: 1.1
-id: qbittorrent-with-gluetun
+id: anael-qbittorrent-with-gluetun
 category: networking
 name: qBittorrent (with Gluetun)
 version: "5.0.3"

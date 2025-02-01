@@ -30,7 +30,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
     environment:
-      APP_ID: "prowlarr-with-gluetun"
+      APP_ID: "anael-prowlarr-with-gluetun"
       APP_URL: "http://anael-prowlarr-with-gluetun_server_1:9696"
       FLARESOLVERR_URL: "http://prowlarr_indexer_proxy_1:8191"
       TRANSMISSION_HOST: "transmission_server_1"
