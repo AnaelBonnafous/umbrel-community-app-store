@@ -1,0 +1,49 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: anael-gluetun_server_1
+      APP_PORT: 3000
+
+  homepage:
+    image: gethomepage/homepage:v0.10.9@sha256:b6d732817572f9af99ec168b10641b8f7820f30cfa5a5cc5c68f1e291804bec8
+    restart: on-failure
+    depends_on:
+      - server
+    volumes:
+      - ${APP_DATA_DIR}/data/homepage:/app/config
+    network_mode: "service:server"
+
+  server:
+    image: qmcgaw/gluetun:v3.40.0@sha256:2b42bfa046757145a5155acece417b65b4443c8033fb88661a8e9dcf7fda5a00
+    # line above must be uncommented to allow external containers to connect.
+    # See https://github.com/qdm12/gluetun-wiki/blob/main/setup/connect-a-container-to-gluetun.md#external-container-to-gluetun
+    restart: on-failure
+    ports:
+      - "8888:8888/tcp" # HTTP proxy
+      - "8388:8388/tcp" # Shadowsocks
+      - "8388:8388/udp" # Shadowsocks
+      - "3000:3000/tcp" # Homepage
+    volumes:
+      - ${APP_DATA_DIR}/data/gluetun:/gluetun
+    environment:
+      # See https://github.com/qdm12/gluetun-wiki/tree/main/setup#setup
+      - VPN_SERVICE_PROVIDER=${APP_VPN_SERVICE_PROVIDER}
+      - VPN_TYPE=${APP_VPN_TYPE}
+      # OpenVPN:
+      - OPENVPN_USER=${APP_OPENVPN_USER}
+      - OPENVPN_PASSWORD=${APP_OPENVPN_PASSWORD}
+      # Wireguard:
+      - WIREGUARD_PRIVATE_KEY=${APP_WIREGUARD_PRIVATE_KEY}
+      - WIREGUARD_ADDRESSES=${APP_WIREGUARD_ADDRESSES}
+      # Timezone for accurate log times
+      - TZ=${APP_TZ}
+      # Server list updater
+      # See https://github.com/qdm12/gluetun-wiki/blob/main/setup/servers.md#update-the-vpn-servers-list
+      - UPDATER_PERIOD=${APP_UPDATER_PERIOD}
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    network_mode: "bridge"
