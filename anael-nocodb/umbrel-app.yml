@@ -6,31 +6,31 @@ category: files
 version: "0.262.5"
 port: 9060
 description: >-
-  ### Rich Spreadsheet Interface
+  Rich Spreadsheet Interface
 
-  - ⚡ &nbsp;Basic Operations: Create, Read, Update and Delete Tables, Columns, and Rows
-  - ⚡ &nbsp;Fields Operations: Sort, Filter, Group, Hide / Unhide Columns
-  - ⚡ &nbsp;Multiple Views Types: Grid (By default), Gallery, Form, Kanban and Calendar View
-  - ⚡ &nbsp;View Permissions Types: Collaborative Views, & Locked Views
-  - ⚡ &nbsp;Share Bases / Views: either Public or Private (with Password Protected)
-  - ⚡ &nbsp;Variant Cell Types: ID, Links, Lookup, Rollup, SingleLineText, Attachment, Currency, Formula, User, etc
-  - ⚡ &nbsp;Access Control with Roles: Fine-grained Access Control at different levels
-  - ⚡ &nbsp;and more ...
+  - ⚡ Basic Operations: Create, Read, Update and Delete Tables, Columns, and Rows
+  - ⚡ Fields Operations: Sort, Filter, Group, Hide / Unhide Columns
+  - ⚡ Multiple Views Types: Grid (By default), Gallery, Form, Kanban and Calendar View
+  - ⚡ View Permissions Types: Collaborative Views, & Locked Views
+  - ⚡ Share Bases / Views: either Public or Private (with Password Protected)
+  - ⚡ Variant Cell Types: ID, Links, Lookup, Rollup, SingleLineText, Attachment, Currency, Formula, User, etc
+  - ⚡ Access Control with Roles: Fine-grained Access Control at different levels
+  - ⚡ and more ...
 
-  ### App Store for Workflow Automations
+  App Store for Workflow Automations
 
   We provide different integrations in three main categories. See <a href="https://docs.nocodb.com/account-settings/oss-specific-details/#app-store" target="_blank">App Store</a> for details.
 
-  - ⚡ &nbsp;Chat: Slack, Discord, Mattermost, and etc
-  - ⚡ &nbsp;Email: AWS SES, SMTP, MailerSend, and etc
-  - ⚡ &nbsp;Storage: AWS S3, Google Cloud Storage, Minio, and etc
+  - ⚡ Chat: Slack, Discord, Mattermost, and etc
+  - ⚡ Email: AWS SES, SMTP, MailerSend, and etc
+  - ⚡ Storage: AWS S3, Google Cloud Storage, Minio, and etc
 
-  ### Programmatic Access
+  Programmatic Access
 
   We provide the following ways to let users programmatically invoke actions. You can use a token (either JWT or Social Auth) to sign your requests for authorization to NocoDB.
 
-  - ⚡ &nbsp;REST APIs
-  - ⚡ &nbsp;NocoDB SDK
+  - ⚡ REST APIs
+  - ⚡ NocoDB SDK
 
 developer: NocoDB
 website: https://nocodb.com
